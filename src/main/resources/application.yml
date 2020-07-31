@@ -14,8 +14,14 @@ spring:
     username: cos
     password: cos1234
     
-    
   mvc:
     view:
       prefix: /templates/
       suffix: .mustache
+      
+  jpa:
+    hibernate:
+      ddl-auto: update #create(테이블생성) update(한번 create 된 후에는 update로 바꾸어야 함) 아예 변경되 안되게 하려면 none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #모델명 그대로 테이블 생성
+    show-sql: true
