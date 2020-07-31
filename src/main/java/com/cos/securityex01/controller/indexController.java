@@ -46,7 +46,7 @@ public class IndexController {
 		return "join";
 	}
 	
-	@PostMapping("joinProc")
+	@PostMapping("/joinProc")
 	public String joinProc(User user) {
 		System.out.println("회원가입 진행 : " + user);
 		String rawPassword = user.getPassword();
